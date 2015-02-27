@@ -12,6 +12,8 @@ app.factory('instagram', function($resource){
 			// The ngResource module gives us the $resource service. It makes working with
 			// AJAX easy. Here I am using a client_id of a test app. Replace it with yours.
 
+			// var api = $resource('https://api.instagram.com/v1/media/popular?client_id=:client_id&callback=JSON_CALLBACK',{
+			// 	client_id: '642176ece1e7445e99244cec26f4de1f'
 			var api = $resource('https://api.instagram.com/v1/media/popular?client_id=:client_id&callback=JSON_CALLBACK',{
 				client_id: '642176ece1e7445e99244cec26f4de1f'
 			},{
@@ -35,6 +37,8 @@ app.factory('instagram', function($resource){
 
 // The controller. Notice that I've included our instagram service which we
 // defined below. It will be available inside the function automatically.
+
+app.controller('SwitchableGridController', SwitchableGridController)
 
 function SwitchableGridController($scope, instagram){
 
