@@ -13,11 +13,11 @@ app.factory('instagram', function($resource){
 			// AJAX easy. Here I am using a client_id of a test app. Replace it with yours.
 
 
-			// var api = $resource('https://api.instagram.com/v1/media/popular?client_id=:client_id&callback=JSON_CALLBACK',{
-			// 	client_id: '642176ece1e7445e99244cec26f4de1f'
-			// },
-			var api = $resource('http://www.mapmyrun.com/vxproxy/v7.0/workout/782830271/?field_set=time_series&callback=JSON_CALLBACK',
-				{},
+			var api = $resource('https://api.instagram.com/v1/media/popular?client_id=:client_id&callback=JSON_CALLBACK',{
+				client_id: '642176ece1e7445e99244cec26f4de1f'
+			},
+			// var api = $resource('http://www.mapmyrun.com/vxproxy/v7.0/workout/782830271/?field_set=time_series&callback=JSON_CALLBACK',
+			// 	{},
 			{
 				// This creates an action which we've chosen to name "fetch". It issues
 				// an JSONP request to the URL of the resource. JSONP requires that the
